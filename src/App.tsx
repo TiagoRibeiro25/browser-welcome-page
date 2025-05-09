@@ -5,7 +5,7 @@ import { getGreetingName, getCurrentHour } from "./lib/time";
 const App: React.FC = (): React.JSX.Element => {
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen bg-zinc-800">
-			<h1 className="text-4xl font-bold text-pink-200">
+			<h1 className="text-4xl font-bold text-pink-200 text-center mx-2">
 				{getGreetingName(getCurrentHour())}, Tiago!
 			</h1>
 
@@ -16,7 +16,7 @@ const App: React.FC = (): React.JSX.Element => {
 				Made by Tiago Ribeiro
 				<br />
 				<a
-					href="#"
+					href="https://github.com/TiagoRibeiro25/browser-welcome-page"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="underline"
