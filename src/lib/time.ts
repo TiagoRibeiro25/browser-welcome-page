@@ -8,9 +8,9 @@
  */
 export function getGreetingName(hour: number): string {
 	const data = {
-		morning: { min: 7, max: 11, text: "Good morning 🌅" },
+		morning: { min: 0, max: 11, text: "Good morning 🌅" },
 		afternoon: { min: 12, max: 17, text: "Good afternoon ☀️" },
-		evening: { min: 18, max: 6, text: "Good evening 🌙" },
+		evening: { min: 18, max: 23, text: "Good evening 🌙" },
 	};
 
 	if (hour < 0 || hour > 23) {
@@ -19,14 +19,9 @@ export function getGreetingName(hour: number): string {
 
 	// Check if the hour is in the range of morning, afternoon, or evening
 	for (const key in data) {
-		const { min, max } = data[key as keyof typeof data];
+		const { min, max, text } = data[key as keyof typeof data];
 		if (hour >= min && hour <= max) {
-			return data[key as keyof typeof data].text;
-		}
-
-		// For evening, we need to check if the hour is less than 6
-		if (key === "evening" && hour < max) {
-			return data[key as keyof typeof data].text;
+			return text;
 		}
 	}
 
