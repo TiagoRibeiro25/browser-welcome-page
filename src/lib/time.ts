@@ -8,9 +8,9 @@
  */
 export function getGreetingName(hour: number): string {
 	const data = {
-		morning: { min: 0, max: 11, text: "Good morning 🌅" },
+		morning: { min: 6, max: 11, text: "Good morning 🌅" },
 		afternoon: { min: 12, max: 17, text: "Good afternoon ☀️" },
-		evening: { min: 18, max: 23, text: "Good evening 🌙" },
+		evening: { min: 0, max: 23, text: "Good evening 🌙" },
 	};
 
 	if (hour < 0 || hour > 23) {
